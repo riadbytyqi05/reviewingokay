@@ -1,0 +1,45 @@
+[debug] [2023-11-04T23:06:49.339Z] ----------------------------------------------------------------------
+[debug] [2023-11-04T23:06:49.341Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\VORTEX\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-04T23:06:49.341Z] CLI Version:   12.8.0
+[debug] [2023-11-04T23:06:49.341Z] Platform:      win32
+[debug] [2023-11-04T23:06:49.342Z] Node Version:  v18.13.0
+[debug] [2023-11-04T23:06:49.342Z] Time:          Sun Nov 05 2023 00:06:49 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2023-11-04T23:06:49.342Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-04T23:06:49.421Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-04T23:06:49.421Z] > authorizing via signed-in user (nayferhall@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\dev\htdocs\firebase\final
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-04T23:06:55.932Z] Using project from CLI flag: nayfernewthingisdone
+[debug] [2023-11-04T23:06:55.934Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nayfernewthingisdone [none]
+[debug] [2023-11-04T23:06:57.288Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nayfernewthingisdone 200
+[debug] [2023-11-04T23:06:57.288Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nayfernewthingisdone {"projectId":"nayfernewthingisdone","projectNumber":"1001828607905","displayName":"nayfernewthingisdone","name":"projects/nayfernewthingisdone","resources":{"hostingSite":"nayfernewthingisdone"},"state":"ACTIVE","etag":"1_8f2479a1-1f36-4d51-b1c3-0503aad3a36a"}
+[info] i  Using project nayfernewthingisdone (nayfernewthingisdone) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

